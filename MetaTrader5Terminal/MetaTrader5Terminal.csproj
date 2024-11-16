@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageProjectUrl></PackageProjectUrl>
+    <RepositoryUrl>https://github.com/FintechProgramming/MetaTader5-Terminal</RepositoryUrl>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <Version>1.0.2</Version>
+    <PackageIcon>icons8-forex-100.png</PackageIcon>
+    <Title>MetaTrader Terminal</Title>
+    <Company>Seyyed Mohammad Zandieh - Parham Mirsadeghi</Company>
+    <Description>I've created a solution in MetaTrader that allows the development of trading strategies using the C# programming language. This setup enables traders and developers to utilize the features of C# for creating, testing, and optimizing trading strategies directly within the MetaTrader environment. By combining the flexibility and power of C# with the trading capabilities of MetaTrader, it becomes easier to implement advanced and customized trading strategies.
+
+</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\..\..\Desktop\icons8-forex-100.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+</Project>
