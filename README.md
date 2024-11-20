@@ -1,13 +1,17 @@
 # MetaTader5-Terminal
 
 This terminal is designed for ease of access for those who  interested in implementing, analyzing and testing trading strategies instead of using the MQL5 language, so that it is possible to develop in the Visual Studio development environment.
-Requirements:
+
+# Requirements:
+
 •	MetaTrader5
+
 •	VisualStudio & .Net8
 
 
 
-Setup instruction:
+
+# Setup instruction:
 
 •	Download the .ex5 file from the link below:
 
