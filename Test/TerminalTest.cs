@@ -7,7 +7,7 @@ namespace Test
     public class TerminalTest
     {
         MetaTraderTerminal metaTerminal;
-        string symbol = "GBPUSD_i";
+        string symbol = "GBPUSD";
         TimeFrame timeFrame = TimeFrame.PERIOD_M15;
 
         public TerminalTest()
@@ -122,5 +122,20 @@ namespace Test
 
             Assert.AreEqual(3, 3);
         }
+
+        [TestMethod]
+        public void GetCalendarHistory()
+        {
+            DateTime start = new DateTime(2025, 7, 22, 10, 00, 00, 111);
+            DateTime end = new DateTime(2025, 7, 25, 10, 00, 00, 111);
+            string currency = "USD";
+
+
+           var CalenderResults = metaTerminal.GetCalendarHistory(currency, start, end);
+
+
+            Assert.IsNotNull(CalenderResults);
+        }
+
     }
 }

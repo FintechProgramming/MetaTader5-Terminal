@@ -208,7 +208,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    List<Position> _positions = JsonConvert.DeserializeObject<List<Position>>(jObject2["OPENED"].ToString());
+                    List<Position> _positions = JsonConvert.DeserializeObject<List<Position>>(jObject2["DATA"].ToString());
                     if (_positions is null)
                     {
                         _positions = new List<Position>();
@@ -241,7 +241,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA_VALUES"].ToString());
+                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the command sent. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -265,7 +265,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA_VALUES"].ToString());
+                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the command sent. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -288,7 +288,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<double>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<double>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -311,7 +311,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<double>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<double>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -337,7 +337,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<double>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<double>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -364,7 +364,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<ResultLine>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<ResultLine>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -390,7 +390,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<ResultLine>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<ResultLine>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -416,7 +416,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA_VALUES"].ToString());
+                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -461,7 +461,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA_VALUES"].ToString());
+                    return JsonConvert.DeserializeObject<List<double>>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -484,7 +484,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<int>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<int>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -507,7 +507,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<DonchianChannelResult>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<DonchianChannelResult>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -531,7 +531,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<DonchianChannelResult>(jObject2["DATA_VALUE"].ToString());
+                    return JsonConvert.DeserializeObject<DonchianChannelResult>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the Custom_Indicator command. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -643,7 +643,7 @@ namespace MetaTrader5Terminal
                 var jObject2 = SendCommand(jObject);
                 if (jObject2["MSG"].ToString() == "PRICE_HISTORY")
                 {
-                    List<Rates> ratesList = JsonConvert.DeserializeObject<List<Rates>>(jObject2["Data"].ToString());
+                    List<Rates> ratesList = JsonConvert.DeserializeObject<List<Rates>>(jObject2["DATA"].ToString());
                     return ratesList;
                     // return JsonConvert.DeserializeObject<List<Rates>>(jObject2.ToString());
                 }
@@ -704,7 +704,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<TradeResult>(jObject2["Data"].ToString());
+                    return JsonConvert.DeserializeObject<TradeResult>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the command sent. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString());
@@ -754,7 +754,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<bool>(jObject2["Data"].ToString());
+                    return JsonConvert.DeserializeObject<bool>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the command sent. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -835,7 +835,7 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<List<Quote>>(jObject2["Data"].ToString());
+                    return JsonConvert.DeserializeObject<List<Quote>>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the command sent. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
@@ -857,12 +857,33 @@ namespace MetaTrader5Terminal
                 JObject jObject2 = SendCommand(jObject);
                 if (jObject2["ERROR_ID"].ToString() == "0")
                 {
-                    return JsonConvert.DeserializeObject<List<Quote>>(jObject2["Data"].ToString());
+                    return JsonConvert.DeserializeObject<List<Quote>>(jObject2["DATA"].ToString());
                 }
 
                 throw new Exception("Error with the command sent. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
             }
             catch (Exception)
+            {
+                throw;
+            }
+        }
+        public List<CalendarResult> GetCalendarHistory(string Currency, DateTime fromDate, DateTime ToDate)
+        {
+            try
+            {
+                JObject jObject = new JObject();
+                jObject["MSG"] = "iGetCalendarHistory";
+                jObject["Currency"] = Currency;
+                jObject["FROM_DATE"] = fromDate.ToString("yyyy.MM.dd HH:mm:ss.fff");
+                jObject["TO_DATE"] = ToDate.ToString("yyyy.MM.dd HH:mm:ss.fff");
+                JObject jObject2 = SendCommand(jObject);
+                if (jObject2["ERROR_ID"].ToString() == "0")
+                {
+                    return JsonConvert.DeserializeObject<List<CalendarResult>>(jObject2["DATA"].ToString());
+                }
+
+                throw new Exception("Error with the command sent. ERROR_ID: " + jObject2["ERROR_ID"]?.ToString() + " ERROR_DESCRIPTION: " + jObject2["ERROR_DESCRIPTION"]);
+            } catch (Exception)
             {
                 throw;
             }
