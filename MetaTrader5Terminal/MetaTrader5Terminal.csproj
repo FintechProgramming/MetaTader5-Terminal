@@ -8,7 +8,7 @@
     <PackageProjectUrl></PackageProjectUrl>
     <RepositoryUrl>https://github.com/FintechProgramming/MetaTader5-Terminal</RepositoryUrl>
     <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <PackageIcon></PackageIcon>
     <Title>MetaTrader Terminal</Title>
     <Company>Seyyed Mohammad Zandieh - Parham Mirsadeghi</Company>
